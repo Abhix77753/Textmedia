@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>TextSocial — Insta-like (text only)</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <!-- Topbar -->
+    <header class="topbar">
+      <div class="left">
+        <button id="logoBtn" class="logo">TextSocial</button>
+      </div>
+      <div class="center small">Text-only social demo</div>
+      <div class="right">
+        <button id="notifBtn" class="icon">🔔<span id="notifBadge" class="badge" style="display:none">0</span></button>
+        <button id="composeQuick" class="icon">✚</button>
+      </div>
+    </header>
+
+    <!-- Stories row -->
+    <section id="stories" class="stories" aria-label="stories"></section>
+
+    <!-- Main screen where tabs render -->
+    <main id="screen" class="screen" role="main"></main>
+
+    <!-- Bottom nav -->
+    <nav class="bottomnav" role="navigation" aria-label="main nav">
+      <button class="navbtn active" data-tab="home">Home</button>
+      <button class="navbtn" data-tab="search">Search</button>
+      <button class="navbtn" data-tab="compose">Post</button>
+      <button class="navbtn" data-tab="messages">Messages</button>
+      <button class="navbtn" data-tab="profile">Profile</button>
+    </nav>
+  </div>
+
+  <!-- Simple modal container -->
+  <div id="modalRoot"></div>
+
+  <!-- App logic -->
+  <script type="module" src="script.js"></script>
+</body>
+</html>
